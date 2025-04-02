@@ -1,0 +1,652 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'poppins', sans-serif;
+    background-color: white; /* Light mode background */
+    color: black; /* Light mode text */
+    transition: background-color 0.3s, color 0.3s;
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #f1f1f1;
+    box-shadow: 0px 2px 5px rgba(0,0,0,0.1);
+    color: #000;
+}
+
+.dark-mode {
+    background-color: rgb(3, 25, 46); /* Dark mode background */
+    color: white; /* Dark mode text */
+}
+
+.dark-mode nav {
+    background-color:rgb(10, 6, 36);
+    color: white;
+}
+
+nav ul{
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li{
+    list-style: none;
+    margin: 0 23px;
+}
+nav ul li a{
+    text-decoration: none;
+    color: inherit;
+}
+nav ul li a:hover{
+    color: blueviolet;
+    font-size:large;
+}
+
+.auth-btn {
+    border: 1px solid #fff;
+    border-radius: 4px;
+}
+
+#modeToggle {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+#modeToggle:hover {
+    color: #ddd;
+}
+
+/* Toggle Button */
+button#modeToggle {
+    position: absolute;
+    margin-top: -42px;
+    margin-left: 39%;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+    margin-left: 15px;
+    color: inherit;
+}
+
+  /* Dropdown container (hidden by default) */
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    opacity: 0;  /* Initially hidden */
+        transform: translateY(10px);  /* Moves the dropdown 10px down initially */
+        transition: opacity 0.3s ease, transform 0.3s ease;  /* Adds smooth transition */
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+    padding: 10px 14px;
+    text-decoration: none;
+    display: block;
+    /* color: #333; */
+}
+
+/* Show the dropdown on hover */
+.dropdown:hover .dropdown-content {
+    display:block;
+    opacity: 1;  /* Fully visible */
+        transform: translateY(0);  /* Back to its normal position */
+}
+
+/* Hover effect for dropdown links */
+.dropdown-content a:hover {
+    background-color: inherit;  
+}
+
+/* Change background color of the dropdown trigger when hovered */
+.dropdown:hover a {
+    background-color: inherit;
+    color: inherit;
+}
+
+.dark-mode .dropdown-content a:hover{
+    background-color: rgb(10, 6, 36);
+    color: #333;
+}
+
+.dark-mode .dropdown:hover a {
+    background-color: rgb(3, 25, 46);
+    color: #ffffff;
+}
+
+main hr{
+    border: 0;
+    background: #9c97f1;
+    height: 1.2px;
+    margin: 40px 84px;
+}
+
+.left{
+    font-size: 1.3rem;
+}
+
+.firstSection{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 31px 0;
+}
+
+.firstSection > div{
+    width: 34%;
+}
+
+.leftSection{
+    font-size: 2.5rem;
+}
+
+.leftSection buttons{
+    padding: 50px 0;
+}
+
+.leftSection .btn{
+    padding: 10px;
+    background: #1e2167;
+    color: white;
+    border: 2px solid white;
+    border-radius: 8px;
+    font-size: 17px;
+    cursor: pointer;
+}
+.rightSection img{
+    width: -webkit-fill-available;
+    margin: 30px 0;
+}
+
+.purple{
+    color: blueviolet;
+}
+
+.text-gray{
+    color: grey;
+    margin-left: 60px;
+}
+
+#element{
+    color: blueviolet;
+}
+
+.secondSection{
+    height: 100vh;
+}
+
+.secondSection h1{
+    font-size: 1.7rem;
+    margin-left: 50px;
+}
+
+.secondSection .box{
+    background: #9c97f1;
+    width: 84vw;
+    height: 2px;
+    margin: 70px 102px;
+    display: flex;
+}
+
+.secondSection .vertical{
+    height: 93px;
+    width: 2px;
+    background-color: #9c97f1;
+    margin: 0 6vw;
+}
+
+.img-top{
+    width: 23px;
+    position: relative;
+    top: -28px;
+    left: -9px;
+}
+
+.vertical-title{
+    right: 49px;
+    position: relative;
+    top: 70px;
+    width: 130px;
+    font-size: 0.9rem;
+}
+
+.vertical-desc{
+    right: 49px;
+    position: relative;
+    top: 75px;
+    color: grey;
+    font-size: 9px;
+    width: 130px;
+}
+
+.aboutImage {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px; /* Space between each item */
+    margin: 0 16px;
+}
+
+.aboutSection h1{
+    text-align: center;
+    font-weight: 900;
+}
+
+.aboutSection p{
+    text-align: center;
+}
+
+.aboutImage > div {
+    background-color: aliceblue;
+    padding: 6px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.aboutImage img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    /* margin-bottom: 15px; */
+}
+
+.aboutImage .h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.aboutImage p {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.aboutImage img {
+    transition: transform 0.2s ease-in-out;
+    cursor: pointer;
+}
+
+.aboutImage img:hover {
+    transform: scale(1.1);
+}
+
+/* Modal container */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.8);
+}
+
+/* Modal content */
+.modal-content {
+    margin: 50px auto;
+    display: block;
+    max-width: 90%;
+    max-height: 80%;
+}
+
+ /* Modal styles */
+ #imageModal {
+    display: none; /* Hidden by default */
+    position: fixed; 
+    z-index: 9999; /* Sit on top */
+    padding-top: 60px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.9); /* Black background with opacity */
+  }
+
+  /* Modal content (image) */
+  #modalImg {
+    margin: auto;
+    display: block;
+    max-width: 80%;
+    max-height: 80%;
+  }
+
+ /* Close button */
+ .close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+  }
+
+  .close:hover,
+  .close:focus {
+    color: #999;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+
+.content h2{
+    text-align: center;
+    color: #000;
+    font-weight: 800;
+}
+
+.serviceSection h1{
+    text-align: center;
+    font-weight: 900;
+}
+
+.serviceSection .text-gray{
+    color: grey;
+    margin-left: 42%;
+}
+
+
+.VideoSection {
+    max-width: 1259px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 70px;
+}
+
+.video-container {
+    display: flex;
+    flex-direction: column;
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: aliceblue; /* Optional: background color for the container */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: subtle shadow for better visibility */
+}
+
+.video-wrapper {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    height: 0;
+    overflow: hidden;
+    border-radius: 8px;
+    background-color: #000; /* Optional: background color for better contrast */
+}
+
+.video-container h2 {
+    font-size: 1.5rem;
+    margin: 8px;
+    color: #333;
+    text-align: center;
+}
+
+.video-container p{
+    font-size: 1.1rem;
+    /* margin: 0px; */
+    color: #333;
+    text-align: center;
+}
+
+
+iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 8px;
+}
+
+
+.projects {
+    padding: 1px;
+    text-align: center;
+}
+
+.projects .text-gray{
+    margin-left: 8px;
+}
+
+.projects h2 {
+    margin-bottom: 15px;
+    font-size: 2em;
+    color: inherit;
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 20px;
+    justify-content: center;
+}
+
+.project-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: block;
+    text-decoration: none;
+    color: inherit;
+}
+
+.project-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.project-item:hover img {
+    transform: scale(1.1);
+}
+
+.project-info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    transform: translateY(100%);
+    transition: transform 0.3s ease;
+}
+
+.project-item:hover .project-info {
+    transform: translateY(0);
+}
+
+.project-info h3 {
+    margin: 0;
+    font-size: 1.2em;
+}
+
+.project-info p {
+    margin: 10px 0 0;
+}
+
+.project-grid .project-item img,
+.project-grid .project-item video {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.contact-form {
+    width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+}
+
+.contact-form h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.input-box {
+    margin-bottom: 15px;
+    margin-right: 20px;
+}
+
+.input-box input,
+.input-box textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+}
+
+.input-box textarea {
+    height: 100px;
+    resize: none;
+}
+
+button[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+#form-message {
+    margin-top: 10px;
+    text-align: center;
+    color: #f00;
+}
+
+footer{
+    background-color: white; 
+    color: #000;
+}
+
+footer .footer-rights{
+    text-align: center;
+   
+}
+
+.foot{
+    display: flex;
+    padding: 15px 56px;
+    justify-content: space-evenly;
+    margin: 20px;
+}
+
+.dark-mode footer {
+    background-color:rgb(10, 6, 36);
+    color: white;
+}
+
+
+.foot ul{
+    list-style: none;
+} 
+
+.footer-one a, .footer-second a, .footer-third a, .footer-fourth a {
+    text-decoration: none;  /* Removes underline */
+        color: inherit;
+           /* Makes text white */
+}
+
+
+
+.footer-one a, .footer-second a:hover, .footer-third a:hover, .footer-fourth a:hover {
+       color: inherit;
+         /* Ensures the color stays white on hover */
+    text-decoration: none;  /* Keeps the underline removed on hover */
+}
+
+@media screen and (max-width:860px) {
+    .box{
+        flex-direction: column;
+    }
+
+    .secondSection{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .secondSection .vertical{
+        height: unset;
+    }
+    .secondSection .box{
+        width: 50vw;
+    }
+    nav{
+        flex-direction: column;
+    }
+    .vertical-title, .vertical-desc{
+        left: 45px;
+    }
+    .firstSection{
+        flex-direction: column-reverse;
+    }
+    .leftSection{
+        width: 100% !important;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .rightSection{
+        width: 721px !important;
+        display: flex;
+        justify-content: center;
+    }
+
+    .rightSection img{
+        width: 45vw;
+        margin-bottom: 73px;
+    }
+
+    .img-top{
+        top: 122px;
+    }
+
+    body{
+        min-width: fit-content;
+    }
+    
+}
+@media (max-width: 768px) {
+    .aboutImage {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .VideoSection {
+        grid-template-columns: 1fr;
+    }
+}

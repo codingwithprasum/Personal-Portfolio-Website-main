@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio Website</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="left">Prasum's Portfolio</div>
+            <div class="right">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li class="dropdown">
+                        <a href="services.html">Services</a> <!-- Dropdown trigger -->
+                        <div class="dropdown-content">
+                            <a href="imageClassifier.html">Image Classifier</a>
+                            <a href="webdev.html">Web Development</a>
+                            <a href="ui-design.html">UI/UX Design</a>
+                            <a href="seo.html">SEO Services</a>
+                        </div>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="">Contact Me</a></li>
+                </ul>
+                <button id="modeToggle">🌙</button> <!-- Light/Dark mode button -->
+
+            </div>
+        </nav>
+    </header>
+    <div class="contact-form">
+        <h2>Contact Me</h2>
+        <form id="contactForm" onsubmit="submitForm(event)">
+            <div class="input-box">
+                <input type="text" id="name" placeholder="Your Name" required>
+            </div>
+            <div class="input-box">
+                <input type="email" id="email" placeholder="Your Email" required>
+            </div>
+            <div class="input-box">
+                <textarea id="message" placeholder="Your Message" required></textarea>
+            </div>
+            <button type="submit">Submit</button>
+            <div id="form-message"></div>
+        </form>
+    </div>
+
+    <footer>
+        <div class="foot">
+            <div class="footer-first">
+                <h1>Prasum's Portfolio Website</h1>
+            </div>
+            <div class="footer-second">
+                <ul>
+                    <li><a href="https://facebook.com" target="_blank">Facebook</a></li>
+                    <li><a href="https://whatsapp.com" target="_blank">WhatsApp</a></li>
+                    <li><a href="/testimonials" target="_blank">Testimonials</a></li>
+                </ul>
+            </div>
+            <div class="footer-third">
+                <ul>
+                    <li><a href="https://instagram.com" target="_blank">Instagram</a></li>
+                    <li><a href="/address" target="_blank">Address</a></li>
+                    <li><a href="/feedback" target="_blank">Feedback</a></li>
+                </ul>
+            </div>
+            <div class="footer-fourth">
+                <ul>
+                    <li><a href="https://linkedin.com" target="_blank">LinkedIn</a></li>
+                    <li><a href="mailto:youremail@example.com" target="_blank">Email</a></li>
+                    <li><a href="https://telegram.org" target="_blank">Telegram</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-rights">
+            Copyright © | www.prasumportfolio.com | All Right Reserved
+        </div>
+    </footer>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
+    <script src="../js/contact.js"></script>
+</html>

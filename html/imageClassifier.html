@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Classifier</title>
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        h2{
+            text-align: center;
+        }
+        input{
+            margin-left: 45%;
+        }
+        p{
+            text-align: center;
+        }
+        #palette-container {
+            display: flex;
+            margin-top: 20px;
+        }
+        .color-box {
+            width: 50px;
+            height: 50px;
+            margin: 0 5px;
+            border-radius: 4px;
+        }
+        #image-container img {
+            max-width: 100%;
+            height: auto;
+            margin-top: 10px;
+            border: 2px solid #ddd;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="left">Prasum's Portfolio</div>
+            <div class="right">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li class="dropdown">
+                        <a href="services.html">Services</a> <!-- Dropdown trigger -->
+                        <div class="dropdown-content">
+                            <a href="">Image Classifier</a>
+                            <a href="webdev.html">Web Development</a>
+                            <a href="ui-design.html">UI/UX Design</a>
+                            <a href="seo.html">SEO Services</a>
+                        </div>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="contact.html">Contact Me</a></li>
+                    <li><a href="login.html" class="login-btn">Login</a></li>
+                    <li><a href="signup.html" class="signup-btn">Signup</a></li>
+                </ul>
+                <button id="modeToggle">🌙</button> <!-- Light/Dark mode button -->
+            </div>
+        </nav>
+    </header>
+    <h2>AI Image Generator</h2>
+    <input type="file" id="image-upload" accept="image/*">
+    <div id="prediction"></div>
+    <p>Upload an image to generate a beautiful color palette:</p>
+    <div id="image-container"></div>
+    <div id="palette-container"></div>
+
+<script src="../js/script.js"></script>
+<script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+<script src="../backend/tensorFlow.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/color-thief/2.3.0/color-thief.umd.js"></script>
+</body>
+</html>
